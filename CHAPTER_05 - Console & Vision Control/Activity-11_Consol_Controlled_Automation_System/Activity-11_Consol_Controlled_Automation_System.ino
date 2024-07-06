@@ -1,5 +1,5 @@
 char data;
-int LED=D2;
+int LED=D0;
 void setup()
 {
   Serial.begin(9600);
