@@ -1,4 +1,4 @@
-#Pip install open-cv python
+#Pip install opencv-python
 #Pip install serial
 #pip install numpy
 
