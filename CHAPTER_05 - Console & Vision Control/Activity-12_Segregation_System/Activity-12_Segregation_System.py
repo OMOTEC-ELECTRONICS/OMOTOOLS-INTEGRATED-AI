@@ -1,6 +1,6 @@
-#pip install opencv-python-headless
-#Pip install open-cv python
-#Pip install serial
+#pip install opencv-python
+#Pip install pyserial
+
 import cv2
 import serial
 
