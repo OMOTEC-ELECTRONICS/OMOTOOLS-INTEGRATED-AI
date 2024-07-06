@@ -1,3 +1,6 @@
+#pip install opencv-python
+#Pip install pyserial
+
 import serial
 import time
 
