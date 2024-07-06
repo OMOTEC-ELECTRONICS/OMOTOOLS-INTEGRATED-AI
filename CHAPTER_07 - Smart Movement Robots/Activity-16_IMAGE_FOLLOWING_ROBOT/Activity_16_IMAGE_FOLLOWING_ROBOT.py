@@ -6,7 +6,7 @@ import cv2
 import numpy as np
 import serial
 
-# Initialize serial connection with Arduino
+# Initialize serial connection with Arduino Ide
 arduino = serial.Serial('COM3', 9600)
 
 def detect_sign(image):
