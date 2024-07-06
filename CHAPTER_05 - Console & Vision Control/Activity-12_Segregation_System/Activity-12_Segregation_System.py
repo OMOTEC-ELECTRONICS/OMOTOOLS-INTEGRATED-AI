@@ -5,7 +5,7 @@ import cv2
 import serial
 
 def main():
-    # Initialize serial connection with Arduino
+    # Initialize serial connection with Arduino Ide
     try:
         arduino = serial.Serial('COM69', 9600)
     except serial.SerialException as e:
