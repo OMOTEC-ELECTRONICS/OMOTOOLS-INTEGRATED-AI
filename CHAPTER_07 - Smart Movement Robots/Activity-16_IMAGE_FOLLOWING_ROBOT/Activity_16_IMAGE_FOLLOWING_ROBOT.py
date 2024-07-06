@@ -1,5 +1,5 @@
 #Pip install opencv-python
-#Pip install serial
+#Pip install pyserial
 #pip install numpy
 
 import cv2
