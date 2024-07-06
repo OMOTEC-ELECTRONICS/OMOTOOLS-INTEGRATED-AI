@@ -1,4 +1,4 @@
-int greenLedPin = 2;
+int greenLedPin = D2;
 
 
 void setup() {
