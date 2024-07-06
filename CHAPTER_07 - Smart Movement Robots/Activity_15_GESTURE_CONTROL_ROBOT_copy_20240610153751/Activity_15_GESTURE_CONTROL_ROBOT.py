@@ -8,7 +8,7 @@ import numpy as np
 import serial
 import mediapipe as mp
 
-# Initialize serial connection with Arduino
+# Initialize serial connection with Arduino Ide
 arduino = serial.Serial('COM32', 9600)
 
 # Initialize MediaPipe hands module
