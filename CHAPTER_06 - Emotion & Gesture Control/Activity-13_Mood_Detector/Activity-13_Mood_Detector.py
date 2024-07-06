@@ -4,7 +4,7 @@
 import cv2
 import serial
 
-# Initialize serial connection with Arduino
+# Initialize serial connection with Arduino Ide
 arduino = serial.Serial('com3', 9600)
 
 # Load pre-trained Haar cascade classifier for face detection
