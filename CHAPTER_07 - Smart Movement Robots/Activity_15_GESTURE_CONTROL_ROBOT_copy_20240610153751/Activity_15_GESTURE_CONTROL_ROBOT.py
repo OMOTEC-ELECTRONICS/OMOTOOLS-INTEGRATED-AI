@@ -1,5 +1,5 @@
-#pip install opencv-python-headless
-#pip install serial
+#pip install opencv-python
+#pip install pyserial
 #pip install mediapipe
 #pip install numpy
 
