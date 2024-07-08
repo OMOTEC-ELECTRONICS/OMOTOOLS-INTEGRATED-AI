@@ -7,7 +7,7 @@ import serial
 def main():
     # Initialize serial connection with Arduino Ide
     try:
-        arduino = serial.Serial('COM69', 9600)
+        arduino_ide = serial.Serial('COM69', 9600)
     except serial.SerialException as e:
         print("Error:", e)
         return
