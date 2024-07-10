@@ -1,13 +1,18 @@
 #include <Servo.h>
 
+
 Servo servoMotor;
 
-void setup() {
-  servoMotor.attach(16); // Attach servo to pin D0
+
+void setup()
+{
+  servoMotor.attach(D0); // Attach servo to pin D0
   Serial.begin(9600);
 }
 
-void loop() {
+
+ void loop()
+{
   if (Serial.available() > 0) {
     char command = Serial.read();
     if (command == '1') {
@@ -17,5 +22,7 @@ void loop() {
     }
   }
 }
+
+
 
 
