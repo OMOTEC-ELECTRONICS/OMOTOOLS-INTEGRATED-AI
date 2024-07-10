@@ -12,7 +12,7 @@ def main():
     except serial.SerialException as e:
         print("Error:", e)
         return
-    
+   
     def control_servo(image_choice):
         command = b'1' if image_choice == 1 else b'0'
         arduino_ide.write(command)
@@ -44,7 +44,7 @@ def main():
             if forward_img.shape[0] > gray_frame.shape[0] or forward_img.shape[1] > gray_frame.shape[1]:
                 scale_factor = min(gray_frame.shape[0] / forward_img.shape[0], gray_frame.shape[1] / forward_img.shape[1])
                 forward_img = cv2.resize(forward_img, (int(forward_img.shape[1] * scale_factor), int(forward_img.shape[0] * scale_factor)))
-            
+           
             if backward_img.shape[0] > gray_frame.shape[0] or backward_img.shape[1] > gray_frame.shape[1]:
                 scale_factor = min(gray_frame.shape[0] / backward_img.shape[0], gray_frame.shape[1] / backward_img.shape[1])
                 backward_img = cv2.resize(backward_img, (int(backward_img.shape[1] * scale_factor), int(backward_img.shape[0] * scale_factor)))
