@@ -4,8 +4,8 @@
 import cv2
 import serial
 
-# Initialize serial connection with Arduino Ide
-arduino = serial.Serial('com3', 9600)
+# Initialize serial connection with Arduino
+arduino_ide = serial.Serial('com69', 9600)
 
 # Load pre-trained Haar cascade classifier for face detection
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
@@ -29,12 +29,12 @@ def detect_emotion(gray, faces):
 
 def control_led(emotion):
     if emotion == 'smile':
-        arduino.write(b'1')  # Send '1' to Arduino to turn green LED on
-        print("Green LED turned ON")
+        arduino_ide.write(b'1')  # Send '1' to Arduino ide to turn on the LED
+        print("LED turned ON")
         
     elif emotion == 'neutral':
-        arduino.write(b'0')  # Send '0' to Arduino to turn green LED off
-        print("Green LED turned OFF")
+        arduino_ide.write(b'0')  # Send '0' to Arduino ide to turn off the LED
+        print("LED turned OFF")
         
 
 while True:
@@ -61,3 +61,5 @@ while True:
 # Release video capture and close all windows
 cap.release()
 cv2.destroyAllWindows()
+
+
