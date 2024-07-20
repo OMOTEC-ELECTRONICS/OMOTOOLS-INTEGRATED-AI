@@ -1,5 +1,10 @@
-#Pip install serial
+#pip install opencv-python
 #pip install numpy
+#pip install pyserial
+#pip install mediapipe
+
+
+#If you get the error - (A new release of pip is available:) then use this command to install the latest version: python -m pip install --upgrade pip
 
 
 
@@ -8,8 +13,8 @@ import numpy as np
 import serial
 import mediapipe as mp
 
-# Initialize serial connection with Arduino Ide
-arduino = serial.Serial('COM69', 9600, timeout=1)
+# Initialize serial connection with Arduino
+arduino_ide = serial.Serial('COM17', 9600, timeout=1)
 
 # Initialize MediaPipe hands module
 mp_hands = mp.solutions.hands
@@ -55,11 +60,11 @@ while True:
             cv2.putText(frame, gesture, (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0),2)
 
             # Send gesture to Arduino via serial
-            arduino.write(gesture.encode())
+            arduino_ide.write(gesture.encode())
 
             # Turn on LED if "Hi" is detected
             if gesture == "Hi":
-                arduino.write(b'H')
+                arduino_ide.write(b'H')
 
         # Display the frame
         cv2.imshow('Frame', frame)
