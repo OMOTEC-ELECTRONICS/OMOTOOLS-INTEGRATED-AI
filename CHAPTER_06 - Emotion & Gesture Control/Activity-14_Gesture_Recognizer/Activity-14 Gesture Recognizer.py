@@ -1,19 +1,17 @@
-#pip install opencv-python
+#Pip install opencv-python: used for computer vision, image processing
+#Pip install pyserial 
 #pip install numpy
-#pip install pyserial
-#pip install mediapipe
-
+#pip install mediapipe: used for pre-built hand tracking, face detection, etc.
 
 #If you get the error - (A new release of pip is available:) then use this command to install the latest version: python -m pip install --upgrade pip
 
 
-
-import cv2
-import numpy as np
+import cv2  
+import numpy as np 
 import serial
 import mediapipe as mp
 
-# Initialize serial connection with Arduino
+# Initialize serial connection with Arduino ide
 arduino_ide = serial.Serial('COM17', 9600, timeout=1)
 
 # Initialize MediaPipe hands module
@@ -59,7 +57,7 @@ while True:
         if gesture is not None:
             cv2.putText(frame, gesture, (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0),2)
 
-            # Send gesture to Arduino via serial
+            # Send gesture to Arduino ide via serial
             arduino_ide.write(gesture.encode())
 
             # Turn on LED if "Hi" is detected
